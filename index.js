@@ -35,6 +35,7 @@ const app = express()
 app.use('/', express.static('public'))
 
 app.get('/tervitus', tervitusCntrl)
+app.get('/',tervitusCntrl)
 app.get('/api/hello', apiHelloCntrl)
 
 const port = process.env.PORT || 8085
