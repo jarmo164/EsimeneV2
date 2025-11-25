@@ -1,5 +1,5 @@
 import express from 'express'
-import { tervitusCntrl } from './controllers/viewControllers.js'
+import { tervitusCntrl, uudisedCntrl } from './controllers/viewControllers.js'
 import { apiHelloCntrl } from './controllers/apiControllers.js'
 import { indexCntrl } from './controllers/viewControllers.js'
 
@@ -13,6 +13,7 @@ app.set("views",  "./views");
 app.set("view engine", "ejs");
 
 app.get('/tervitus', tervitusCntrl)
+app.get('/uudised', uudisedCntrl)
 app.get('/',indexCntrl)
 app.get('/api/hello', apiHelloCntrl)
 
